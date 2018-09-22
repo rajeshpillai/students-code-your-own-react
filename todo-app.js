@@ -24,17 +24,17 @@ class TodoItem extends TinyReact.Component {
     }
   }
   componentDidMount() {
-    this.log("2. TodoItem:cdm");
+    //this.log("2. TodoItem:cdm");
   }
-  
+
   componentWillMount() {
-    this.log("1. TodoItem:cwu");
+    //this.log("1. TodoItem:cwu");
   }
   componentWillReceiveProps(nextProps) {
-    this.log("TodoItem:cwrp: ", nextProps);
+    //this.log("TodoItem:cwrp: ", nextProps);
   }
   componentWillUnmount() {
-    this.log("TodoItem:cwu: " + this.props.task.title);
+    //this.log("TodoItem:cwu: " + this.props.task.title);
   }
 
   handleEdit = (task) => {
@@ -310,6 +310,16 @@ class Hello extends TinyReact.Component {
   } 
 }
 
+const todos = (
+  <ul classname="todos">
+    <li className="todo-item">task 1</li>      
+    <li className="todo-item">task 2</li>
+  </ul>
+);
+
+console.log(todos);
+
+  
 // TinyReact.render(<Hello />, root);
 TinyReact.render(<TodoApp />, root);
 //TinyReact.render(<MessageContainer />, root);
